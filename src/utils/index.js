@@ -1,0 +1,1 @@
+export { getBtnBackgroundColor } from './getBtnBackgroundColor';
