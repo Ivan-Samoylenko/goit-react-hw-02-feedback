@@ -20,10 +20,17 @@ export const Button = styled.button`
   border-radius: ${p => p.theme.radii.btn}px;
   box-shadow: ${p => p.theme.shadows.btn};
 
+  transition: background-color ease-in-out 250ms, box-shadow ease-in-out 250ms,
+    transform ease-in-out 250ms;
+
   :hover,
   :focus {
     background-color: ${p => p.theme.colors.btn.hover};
 
     box-shadow: ${p => p.theme.shadows.btnHover};
+  }
+
+  :active {
+    transform: scale(0.95);
   }
 `;

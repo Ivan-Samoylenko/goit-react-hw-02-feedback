@@ -41,6 +41,6 @@ export const theme = {
   },
   shadows: {
     btn: `0 0 2px 1px #A638F5`,
-    btnHover: `0 0 4px 2px #A638F5`,
+    btnHover: `0 0 8px 4px #A638F5`,
   },
 };
