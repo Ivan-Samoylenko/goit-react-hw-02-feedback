@@ -11,12 +11,7 @@ export const MainStatItem = styled.li`
   background-color: ${getStatBackgroundColor}};
 
   :not(:last-child) {
-    margin-right: ${p => p.theme.space[3]}px;
-  }
-
-  & > svg {
-    width: 24px;
-    height: 24px;
+    margin-bottom: ${p => p.theme.space[3]}px;
   }
 
   & > p {
@@ -25,6 +20,13 @@ export const MainStatItem = styled.li`
     line-height: ${p => p.theme.lineHeights[0]};
 
     color: ${p => p.theme.colors.texts};
+  }
+
+  ${p => p.theme.mediaQueries.medium} {
+    :not(:last-child) {
+      margin-right: ${p => p.theme.space[3]}px;
+      margin-bottom: ${p => p.theme.space[0]}px;
+    }
   }
 `;
 
@@ -38,19 +40,23 @@ export const OtherStatItem = styled.li`
   background-color: ${p => p.theme.colors.btn.backgroundGood};
 
   :not(:last-child) {
-    margin-right: ${p => p.theme.space[4]}px;
-  }
-
-  & > svg {
-    width: 24px;
-    height: 24px;
+    margin-bottom: ${p => p.theme.space[3]}px;
   }
 
   & > p {
+    flex-shrink: 9000;
+
     font-size: ${p => p.theme.fontSizes.texts}px;
     font-weight: ${p => p.theme.fontWeights.regular};
     line-height: ${p => p.theme.lineHeights[0]};
 
     color: ${p => p.theme.colors.texts};
+  }
+
+  ${p => p.theme.mediaQueries.medium} {
+    :not(:last-child) {
+      margin-right: ${p => p.theme.space[4]}px;
+      margin-bottom: ${p => p.theme.space[0]}px;
+    }
   }
 `;

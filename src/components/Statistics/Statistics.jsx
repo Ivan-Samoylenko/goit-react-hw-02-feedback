@@ -27,28 +27,37 @@ export const Statistics = ({
             width="100%"
             mb="4"
             display="flex"
+            flexDirection={['column', 'column', 'row']}
             justifyContent="center"
+            alignItems="center"
           >
             <MainStatItem>
-              <HiBadgeCheck />
+              <HiBadgeCheck size="24" />
               <p>Good: {good}</p>
             </MainStatItem>
             <MainStatItem>
-              <HiGlobeAlt />
+              <HiGlobeAlt size="24" />
               <p>Neutral: {neutral}</p>
             </MainStatItem>
             <MainStatItem>
-              <HiBan />
+              <HiBan size="24" />
               <p>Bad: {bad}</p>
             </MainStatItem>
           </Box>
-          <Box as="ul" width="100%" display="flex" justifyContent="center">
+          <Box
+            as="ul"
+            width="100%"
+            display="flex"
+            flexDirection={['column', 'column', 'row']}
+            justifyContent="center"
+            alignItems="center"
+          >
             <OtherStatItem>
-              <HiExclamationCircle />
+              <HiExclamationCircle size="24" />
               <p>Total: {total}</p>
             </OtherStatItem>
             <OtherStatItem>
-              <HiFire />
+              {true && <HiFire size="24" />}
               <p>Positive feedback: {positivePercentage}</p>
             </OtherStatItem>
           </Box>

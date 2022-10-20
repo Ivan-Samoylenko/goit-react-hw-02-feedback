@@ -3,7 +3,13 @@ import { getBtnBackgroundColor } from 'utils';
 
 export const Option = styled.li`
   :not(:last-child) {
-    margin-right: ${p => p.theme.space[3]}px;
+    margin-bottom: ${p => p.theme.space[3]}px;
+  }
+  ${p => p.theme.mediaQueries.small} {
+    :not(:last-child) {
+      margin-right: ${p => p.theme.space[3]}px;
+      margin-bottom: ${p => p.theme.space[0]}px;
+    }
   }
 `;
 
